@@ -153,34 +153,9 @@ public class MySudoku{
 	
 	public boolean isValidSqrInput(int row, int col, int[][] board)
 	{
-		int r1, r2, c1, c2;
-		if(row < 3){
-			r1 = 0;
-		}
-		else if(row < 6){
-			r1 = 3;
-		}
-		else{
-			r1 = 6;
-		}
-		
-		if(col < 3){
-			c1 = 0;
-		}
-		else if(col < 6){
-			c1 = 3;
-		}
-		else{
-			c1 = 6;
-		}
-		
-		
-		r2 = r1+2;
-		c2 = c1+2;
-		
-		for (int r = r1; r <= r2; r++)
+		for (int r = (row / 3) * 3; r < (row / 3) * 3 + 3; r++)
 		{
-			for (int c = c1; c <= c2; c++)
+			for (int c = (col / 3) * 3; c < (col / 3) * 3 + 3; c++)
 			{
 				if(r == row && c == col)
 					continue;
