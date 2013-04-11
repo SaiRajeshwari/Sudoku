@@ -101,7 +101,7 @@ public class MySudoku {
 			System.out.println();
 			for (int j = 0; j < 9; j++) {
 				p++;
-				System.out.print(" " + board[i][j]);
+				System.out.print(board[i][j]==0 ? "  " :  " " + board[i][j]);
 				if (p % 3 == 0) {
 					System.out.print("|");
 				}
