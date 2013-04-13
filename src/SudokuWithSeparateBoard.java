@@ -1,4 +1,4 @@
-public class MySudoku {
+public class SudokuWithSeparateBoard {
 
 	public void initializeBoard(int[][] board) {
 		board[0][0] = 0;
@@ -178,7 +178,7 @@ public class MySudoku {
 
 	public static void main(String[] args) {
 		int[][] board = new int[9][9];
-		MySudoku s = new MySudoku();
+		SudokuWithSeparateBoard s = new SudokuWithSeparateBoard();
 		s.initializeBoard(board);
 		s.printBoard(board);
 		s.solver(board);
