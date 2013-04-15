@@ -210,14 +210,15 @@ public class SudokuWithSeparateBoard {
 				
 				numsInSquare = new ArrayList<Integer>();
 				
-				for (int k = 0 + i; k < 3 + i; k++) {
-					for (int l = 0 + j; l < 3 + j; l++) {
+				for (int k = i; k < 3 + i; k++) {
+					for (int l = j; l < 3 + j; l++) {
 						numsInSquare.add(new Integer(board[k][l]));
 						if (workBoard[k][l].size() == 1) {
 							numsInSquare.add((Integer) workBoard[k][l].get(0));
 						}
 					}
 				}
+				
 				for (int k = 0 + i; k < 3 + i; k++) {
 					for (int l = 0 + j; l < 3 + j; l++) {
 						
@@ -244,7 +245,7 @@ public class SudokuWithSeparateBoard {
 		s.initializeBoard();
 		s.printBoard();
 		s.initializeWorkBoard();
-
+		
 		while (true) {
 			int flag = 0;
 			for (int i = 0; i < 9; i++) {
@@ -262,7 +263,7 @@ public class SudokuWithSeparateBoard {
 			s.removeByRow();
 			s.removeByColumn();
 			s.removeBySquare();
-			System.out.println("4");
+			
 
 
 		}

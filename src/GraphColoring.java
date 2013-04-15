@@ -1,4 +1,3 @@
-import java.util.Iterator;
 import java.util.Set;
 
 import org.jgrapht.*;
@@ -9,37 +8,9 @@ public class GraphColoring {
 	UndirectedGraph<Integer, DefaultEdge> adjGraph = new SimpleGraph<Integer, DefaultEdge>(
 			DefaultEdge.class);
 
-	private static UndirectedGraph<Integer, DefaultEdge> createIntegerGraph() {
-		UndirectedGraph<Integer, DefaultEdge> g = new SimpleGraph<Integer, DefaultEdge>(
-				DefaultEdge.class);
-
-		Integer v1 = 1;
-		Integer v2 = 3;
-		Integer v3 = 16;
-		Integer v4 = 21;
-
-		// add the vertices
-		g.addVertex(v1);
-		g.addVertex(v2);
-		g.addVertex(v3);
-		g.addVertex(v4);
-
-		// add edges to create a circuit
-		g.addEdge(v1, v2);
-		g.addEdge(v2, v3);
-		g.addEdge(v3, v4);
-		g.addEdge(v4, v1);
-
-		return g;
-	}
-
 	int[][] board = new int[9][9];
 
 	public void initializeBoard() {
-
-		// UndirectedGraph<Integer, DefaultEdge> intGraph =
-		// createIntegerGraph();
-		// System.out.println(intGraph.toString());
 
 		board[0][0] = 0;
 		board[0][1] = 0;
